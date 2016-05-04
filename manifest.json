@@ -1,0 +1,47 @@
+{
+  "manifest_version": 2,
+  "name": "Anti terror extension",
+  "version": "1.0",
+  "description": "The western media reproduce fear and prejudice, when they report on the latest terrorist attack. They're amplifying the terrorists message which have a restrictive effect on normal citizins. We are afraid. We shouldn't be afraid. We should ignore the threat of those who only want to harm us, in that way their mission will fail. This extension is your self-defence and only real protection against the message of jihad, which are being broadcasted by the western media.",
+  "page_action" :
+  {
+    "default_icon" : "images/icon-19x19.png",
+    "default_title" : "Warning: ignore the terror!"
+  },
+  "permissions": [
+    "tabs",
+    "storage"
+	],
+  "content_scripts": [
+    { 
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "exclude_globs": [
+        "*://*mywebsite.com*", 
+        "*://*github.com*"
+      ],
+      "js": ["js/jquery-2.1.4.min.js", "js/filter.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "icons" : {
+  	"16": "images/icon-16x16.png",
+    "19": "images/icon-19x19.png",
+    "48": "images/icon-48x48.png",
+    "128": "images/icon-128x128.png",
+    "130": "images/icon-130x130.png",
+    "550": "images/icon-550x550.png"
+  },
+  "background": {
+    "persistent": false,
+    "page": "background.html"
+  },
+  "options_ui" : {
+    "chrome_style": true,
+    "page": "options.html"
+  },
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'"
+}
