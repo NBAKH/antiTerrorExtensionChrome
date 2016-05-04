@@ -11,8 +11,8 @@ var search = regex.exec(document.body.innerText);
 
 // Functions
 //search function using regular expressions. 
-function filterMild() {
-	console.log("Filtering terror with Mild filter...");
+function findingTerror() {
+	console.log("Filtering terror ...");
 	return $(":contains('terror'), :contains('Terror'), :contains('TERROR')").filter("h1,h2,h3,h4,h5,p,span,li");
 }
 
@@ -36,7 +36,7 @@ function getElements(filter) {
    } else {
 	   return filterDefault();
    }*/
-   return filterMild();
+   return findingTerror();
 }
 
 function filterElements(elements) {
@@ -46,22 +46,38 @@ function filterElements(elements) {
 	
 	//replace elements	
 	for(var i =0; i<= elements.length; i++){
-   		elements[i].innerHTML = html;
+		/*console.log("element: " + elements[i]);
+		console.log("element children: " + elements[i].closest);*/
+		if(elements[i].offsetWidth != null && elements[i].offsetHeight != null){
+			replace(elements[i], elements[i].offsetWidth, elements[i].offsetHeight);
+		} 
+		/*var width = elements[i].offsetWidth;
+		console.log(width);
+		console.log("element height: " + elements[i].offsetHeight);*/
+		//(elements[i].id);
+
 	}
 }
 
 
+function replace(element, width, height){
+	var html = '<img src="http://apollo-na-uploads.s3.amazonaws.com/1440642852/saltylol.jpg" ';
+	console.log("width: " + width);
+	console.log("height: " + height);
+	element.innerHTML = html + width + '" width="' + height + '">';
+}
+
 // Implementation
 // if the regex returns results we are executing this part of the code
 if (search) {
-   console.log("Terror found on page! - Searching for elements...");
+   //console.log("Terror found on page! - Searching for elements...");
    chrome.storage.sync.get({
      filter: 'aggro',
    }, function(items) {
 	   console.log("Filter setting stored is: " + items.filter);
 	   //getting elements according to filter settings
 	   elements = getElements(items.filter);
-	   console.log("this is the element: " + elements);
+	   //console.log("this is the element: " + elements);
 	   /*for(var i =0; i<= elements.length; i++){
 	   	//console.log(elements[i].parentElement);
    		console.log("element number " + i + ":" + elements[i]);
@@ -75,4 +91,4 @@ if (search) {
   chrome.runtime.sendMessage({}, function(response) {});
 }
 
-var html = '<img src="http://apollo-na-uploads.s3.amazonaws.com/1440642852/saltylol.jpg">';
+

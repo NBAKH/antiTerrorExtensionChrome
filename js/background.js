@@ -22,7 +22,7 @@ function onMessage(request, sender, sendResponse) {
     chrome.storage.sync.get({
       filter: 'aggro'
     }, function(items) {
-      ga('send', 'event', 'Filter', 'Trump', items.filter);
+      ga('send', 'event', 'Filter', 'Terror', items.filter);
     });
     sendResponse({});
   }
