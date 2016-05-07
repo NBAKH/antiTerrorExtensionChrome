@@ -7,6 +7,7 @@
 // Variables
 var regex = /Terror/i;
 var search = regex.exec(document.body.innerText);
+var filterType = ""
 
 
 // Functions
@@ -46,17 +47,20 @@ function filterElements(elements) {
 	
 	//replace elements	
 	for(var i =0; i<= elements.length; i++){
-		/*console.log("element: " + elements[i]);
-		console.log("element children: " + elements[i].closest);*/
 		if(elements[i].offsetWidth != null && elements[i].offsetHeight != null){
 			replace(elements[i], elements[i].offsetWidth, elements[i].offsetHeight);
-		} 
+		}
 		/*var width = elements[i].offsetWidth;
 		console.log(width);
 		console.log("element height: " + elements[i].offsetHeight);*/
 		//(elements[i].id);
 
 	}
+}
+
+function fade(elements) {
+	//fading out elements.... 
+	elements.fadeOut("fast");
 }
 
 
