@@ -7,7 +7,7 @@
 // Variables
 var regex = /Terror/i;
 var search = regex.exec(document.body.innerText);
-var filterType = ""
+var filterType = true;
 
 
 // Functions
@@ -30,13 +30,13 @@ function filterVindictive() {
 
 //which mode is selected?? use that mode for filtering
 function getElements(filter) {
-   /*if (filter == "mild") {
-	   return filterMild();
-   } else if (filter == "vindictive") {
-	   return filterVindictive();
-   } else {
-	   return filterDefault();
-   }*/
+   if (filter == "ignorant") {
+	   filterType = false;
+	}
+    else {
+	   filterType = true;
+   }
+   console.log(filterType)
    return findingTerror();
 }
 
@@ -45,17 +45,24 @@ function filterElements(elements) {
 	//fading out elements.... 
 	//elements.fadeOut("fast");
 	
-	//replace elements	
-	for(var i =0; i<= elements.length; i++){
-		if(elements[i].offsetWidth != null && elements[i].offsetHeight != null){
-			replace(elements[i], elements[i].offsetWidth, elements[i].offsetHeight);
-		}
-		/*var width = elements[i].offsetWidth;
-		console.log(width);
-		console.log("element height: " + elements[i].offsetHeight);*/
-		//(elements[i].id);
-
+	if(filterType == false){
+		fade(elements);
 	}
+	else{
+		//replace elements	
+		for(var i =0; i<= elements.length; i++){
+			if(elements[i].offsetWidth != null && elements[i].offsetHeight != null){
+				replace(elements[i], elements[i].offsetWidth, elements[i].offsetHeight);
+				console.log(elements[i].nodeName);
+			}
+			/*var width = elements[i].offsetWidth;
+			console.log(width);
+			console.log("element height: " + elements[i].offsetHeight);*/
+			//(elements[i].id);
+
+		}		
+	}
+	
 }
 
 function fade(elements) {
@@ -68,7 +75,12 @@ function replace(element, width, height){
 	var html = '<img src="http://apollo-na-uploads.s3.amazonaws.com/1440642852/saltylol.jpg" ';
 	console.log("width: " + width);
 	console.log("height: " + height);
-	element.innerHTML = html + width + '" width="' + height + '">';
+	if(element.nodeName != 'SPAN'){
+		element.innerHTML = '<'+element.nodeName+'>THIS WOULD HAVE CORRUPTED YOUR BRAIN!!</'+element.nodeName+'> ';
+	}
+	else{
+		element.innerHTML = html + width + '" width="' + height + '">';
+	}
 }
 
 // Implementation
