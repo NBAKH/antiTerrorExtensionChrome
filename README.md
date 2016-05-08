@@ -37,22 +37,22 @@ Syria
 
 
 ###Cultural places and events
-*Saudi Arabia
-	*[sauditourism.sa](http://sauditourism.sa/en/Events/Pages/Janadriah.aspx)
-*United Arab Emirates
-	*[tourist attractions](http://www.planetware.com/tourist-attractions/united-arab-emirates-uae.htm)
-*Egypt 
-*Lebanon
-	*[art festival](http://www.beiteddine.org/)
-*Pakistan
-	*[tripadvisor](https://www.tripadvisor.dk/Attractions-g659499-Activities-Afghanistan.html)
-*Somalia 
-*Syria
-	*[festivals and events](http://www.iexplore.com/articles/travel-guides/middle-east/syria/festivals-and-events)
-*Yemen 
-	*[producer and rapper](https://en.wikipedia.org/wiki/Hagage_%22AJ%22_Masaed)
-	*[national tree. dragon blood tree](http://photography.nationalgeographic.com/photography/photo-of-the-day/socotra-island-ngpc2015/)
-*Morocco
-	*[Festival Gnaoua](https://www.tripadvisor.co.uk/Attraction_Review-g298349-d2034932-Reviews-Festival_Gnaoua-Essaouira_Marrakech_Tensift_El_Haouz_Region.html)
-*Iraq
-	*[national dish](https://en.wikipedia.org/wiki/Masgouf)
+* Saudi Arabia
+	* [sauditourism.sa](http://sauditourism.sa/en/Events/Pages/Janadriah.aspx)
+* United Arab Emirates
+	* [tourist attractions](http://www.planetware.com/tourist-attractions/united-arab-emirates-uae.htm)
+* Egypt 
+* Lebanon
+	* [art festival](http://www.beiteddine.org/)
+* Pakistan
+	* [tripadvisor](https://www.tripadvisor.dk/Attractions-g659499-Activities-Afghanistan.html)
+* Somalia 
+* Syria
+	* [festivals and events](http://www.iexplore.com/articles/travel-guides/middle-east/syria/festivals-and-events)
+* Yemen 
+	* [producer and rapper](https://en.wikipedia.org/wiki/Hagage_%22AJ%22_Masaed)
+	* [national tree. dragon blood tree](http://photography.nationalgeographic.com/photography/photo-of-the-day/socotra-island-ngpc2015/)
+* Morocco
+	* [Festival Gnaoua](https://www.tripadvisor.co.uk/Attraction_Review-g298349-d2034932-Reviews-Festival_Gnaoua-Essaouira_Marrakech_Tensift_El_Haouz_Region.html)
+* Iraq
+	* [national dish](https://en.wikipedia.org/wiki/Masgouf)
