@@ -140,4 +140,7 @@ if (search) {
   chrome.runtime.sendMessage({}, function(response) {});
 }
 
+var webText=[
+	new Text('<h1></h1>','<p></p>', ),
+];
 
