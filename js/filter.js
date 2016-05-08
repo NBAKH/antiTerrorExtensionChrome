@@ -90,7 +90,7 @@ function iterateThrough(element){
 	for (var i = 0; i<grandParent.children.length; i++) {	
 		aunts = grandParent.children[i];
 		for(var j = 0; j < aunts.children.length; j++){
-			if(aunts.children[j].tagName != "LI"){
+			if(aunts.children[j].tagName != "LI" && aunts.children[j].tagName != "TIME"){
 				try{
 					console.log("all kinds of children: "+aunts.children[j].tagName);
 					replace(aunts.children[j], aunts.children[j].offsetWidth, aunts.children[j].offsetHeight);
@@ -141,6 +141,6 @@ if (search) {
 }
 
 var webText=[
-	new Text('<h1></h1>','<p></p>', ),
+	new Text('></','></','img')
 ];
 
