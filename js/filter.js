@@ -141,6 +141,8 @@ if (search) {
 }
 
 var webText=[
-	new Text('></','></','img')
+	new Text('></','></','<img src="http://apollo-na-uploads.s3.amazonaws.com/1440642852/saltylol.jpg"'),
+	new Text('></','></','<img src=""'),
+	new Text('></','></','<img src=""'),
 ];
 
