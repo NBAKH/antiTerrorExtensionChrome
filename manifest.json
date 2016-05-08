@@ -15,12 +15,26 @@
   "content_scripts": [
     { 
       "matches": [
+        /*"http://politiken.dk/*",
+        "https://politiken.dk/*",
+        "http://dr.dk/*",
+        "https://dr.dk/*",
+        "http://ekstrabladet.dk/*",
+        "https://ekstrabladet.dk/*",
+        "http://tv2.dk/*",
+        "https://tv2.dk/*",
+        "http://nyheder.tv2.dk/*",
+        "https://nyheder.tv2.dk/*",
+        "http://google.tv2.dk/*",
+        "https://google.tv2.dk/*",
+        "http://mx.dk/*",
+        "https://mx.dk/*",*/
         "http://*/*",
         "https://*/*"
       ],
       "exclude_globs": [
         "*://*mywebsite.com*", 
-        "*://*github.com*"
+        "*://*github.com/NBAKH/antiTerrorExtensionChrome*"
       ],
       "js": ["js/jquery-2.1.4.min.js", "js/filter.js"],
       "run_at": "document_idle",
