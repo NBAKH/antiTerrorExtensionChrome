@@ -60,7 +60,7 @@ function filterElements(elements) {
 						iterateThrough(elements[i]);	
 					}
 					else{
-						replace(elements[i], elements[i].offsetWidth, elements[i].offsetHeight);	
+						replace(elements[i], elements[i].offsetWidth, elements[i].offsetHeight, Math.floor(Math.random()*texts.length));	
 					}
 					console.log(elements[i].nodeName);
 				}
@@ -76,8 +76,6 @@ function iterateThrough(element){
 	var parent = element.parentElement;
 	//console.log("parent: "+parent.nodeName);
 	var children = parent.children;
-	var current = 0;
-	var level = 2;
 	var grandParent = parent.parentElement;
 
 	// for (var i = 0; i<children.length; i++) {
@@ -123,6 +121,12 @@ function replace(element, width, height, textNumber){
 			break;	
 		case "P":
 			element.innerHTML = '<'+element.nodeName+texts[textNumber][2]+element.nodeName+'> ';
+			break;
+		case "LI":
+			element.innerHTML = '<'+element.nodeName+texts[textNumber][0]+element.nodeName+'> '+texts[textNumber][3] + width + '" width="' + height + '">';
+			break;
+		case "H3":
+			element.innerHTML = '<'+element.nodeName+texts[textNumber][1]+element.nodeName+'> '+'<'+element.nodeName+texts[textNumber][2]+element.nodeName+'> ';
 			break;
 		default:
 			element.innerHTML = texts[textNumber][3] + width + '" width="' + height + '">';
