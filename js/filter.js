@@ -35,12 +35,12 @@ function getElements(filter) {
 	site = window.location.host;
 	if (filter == "ignorant") {
 		filterType = false;
+		return filterVindictive();
 	}
     else {
 	   filterType = true;
+	   return findingTerror();
    }
-   console.log(filterType)
-   return findingTerror();
 }
 
 function filterElements(elements) {
@@ -74,15 +74,8 @@ function filterElements(elements) {
 
 function iterateThrough(element){
 	var parent = element.parentElement;
-	//console.log("parent: "+parent.nodeName);
 	var children = parent.children;
 	var grandParent = parent.parentElement;
-
-	// for (var i = 0; i<children.length; i++) {
-	// 	//console.log("      children: " + children[i].nodeName);
-	// 	replace(children[i], children[i].offsetWidth, children[i].offsetHeight);
-	// }
-	// console.log("grandparent size on x: " + grandParent.offsetWidth +" and on y: "+ grandParent.offsetHeight);
 	var textNumber = Math.floor(Math.random()*texts.length);
 
 	for (var i = 0; i<grandParent.children.length; i++) {	
@@ -131,19 +124,11 @@ function replace(element, width, height, textNumber){
 		default:
 			element.innerHTML = texts[textNumber][3] + width + '" width="' + height + '">';
 	}
-	
-	// if(element.nodeName != 'href'){
-	// 	element.innerHTML = '<'+element.nodeName+'>THIS WOULD HAVE CORRUPTED YOUR BRAIN!!</'+element.nodeName+'> ';
-	// }
-	// else{
-	// 	element.innerHTML = html + width + '" width="' + height + '">';
-	// }
 }
 
 // Implementation
 // if the regex returns results we are executing this part of the code
 if (search) {
-   //console.log("Terror found on page! - Searching for elements...");
    chrome.storage.sync.get({
      filter: 'aggro',
    }, function(items) {

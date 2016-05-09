@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "Terror of Ignorance & Enlightenment",
-  "version": "1.0",
-  "description": "The western media reproduce fear and prejudice, when they report on the latest terrorist attack. They're amplifying the terrorists message which have a restrictive effect on normal citizins. We are afraid. We shouldn't be afraid. We should ignore the threat of those who only want to harm us, in that way their mission will fail. This extension is your self-defence and only real protection against the message of jihad, which are being broadcasted by the western media.",
+  "version": "1.1",
+  "description": "The western media reproduce fear and prejudice, when they report on the latest terrorist attack. This is your protection from it",
   "page_action" :
   {
     "default_icon" : "images/icon-19x19.png",
@@ -15,25 +15,11 @@
   "content_scripts": [
     { 
       "matches": [
-        /*"http://politiken.dk/*",
-        "https://politiken.dk/*",
-        "http://dr.dk/*",
-        "https://dr.dk/*",
-        "http://ekstrabladet.dk/*",
-        "https://ekstrabladet.dk/*",
-        "http://tv2.dk/*",
-        "https://tv2.dk/*",
-        "http://nyheder.tv2.dk/*",
-        "https://nyheder.tv2.dk/*",
-        "http://google.tv2.dk/*",
-        "https://google.tv2.dk/*",
-        "http://mx.dk/*",
-        "https://mx.dk/*",*/
         "http://*/*",
         "https://*/*"
       ],
       "exclude_globs": [
-        "*://*mywebsite.com*", 
+        "*://*niels-bak.dk*", 
         "*://*github.com/NBAKH/antiTerrorExtensionChrome*"
       ],
       "js": ["js/jquery-2.1.4.min.js", "js/filter.js"],
