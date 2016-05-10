@@ -61,3 +61,14 @@ Syria
 	* [Festival Gnaoua](https://www.tripadvisor.co.uk/Attraction_Review-g298349-d2034932-Reviews-Festival_Gnaoua-Essaouira_Marrakech_Tensift_El_Haouz_Region.html)
 * Iraq
 	* [national dish](https://en.wikipedia.org/wiki/Masgouf)
+
+
+## DOKK1 notes
+* http://verdensbedstenyheder.dk/
+* psykologi, hukommelsesforskning, PhD for nyligt.
+* YES MEN avis.
+* https://www.ted.com/talks/eli_pariser_beware_online_filter_bubbles?language=en
+* ohif protocol mjolner arhus uni
+* tm.org
+* transcendental.meditation.dk
+* 
